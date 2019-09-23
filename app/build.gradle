@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.elmenus.elmenustask"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation libs.kotlin
+
+    // Dependency Injection
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation libs.koinTest
+    implementation libs.koin
+    implementation libs.koinAndroidXScop
+    implementation libs.koinViewModel
+
+
+    // network layer
+    implementation libs.okhttp
+    implementation libs.okhttp_logging
+    implementation libs.retrofit
+    implementation libs.retrofit_gson
+    implementation libs.retrofit2Coroutines
+
+
+    // coroutine
+    implementation libs.coroutineCore
+    implementation libs.coroutineAndroid
+    implementation libs.coroutineViewModelScope
+    implementation libs.coroutineTest
+
+
+    // image download
+    implementation libs.glide
+
+
+    implementation libs.appcompat
+    implementation libs.core
+    implementation libs.material
+    implementation libs.annotation
+    implementation libs.lifecycleExtensions
+    implementation libs.legacy
+    implementation libs.constraint
+    implementation libs.recyclerview
+
+
+    implementation libs.koin
+    implementation libs.koinJava
+    implementation libs.firebaseCore
+
+
+    //add test
+    testImplementation libs.junit_test_4
+    androidTestImplementation libs.AndroidXTest
+    androidTestImplementation libs.Esspresso
+    testImplementation libs.Mockito
+
+
+    implementation libs.Room
+    implementation libs.RoomKtx
+    implementation libs.paging
+    implementation "androidx.paging:paging-runtime:2.1.0"
+
+
+    kapt libs.RoomCompiler
+
+
+}

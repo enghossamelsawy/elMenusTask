@@ -1,0 +1,16 @@
+<resources>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="spacing_tiny">3dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xLarge">32dp</dimen>
+    <dimen name="spacing_xxLarge">48dp</dimen>
+    <dimen name="spacing_xxxLarge">64dp</dimen>
+    <dimen name="spacing_xxxxLarge">72dp</dimen>
+    <dimen name="spacing_xxxxxLarge">100dp</dimen>
+    <dimen name="elevation">5dp</dimen>
+    <dimen name="header2">18sp</dimen>
+</resources>
