@@ -34,8 +34,6 @@ dependencies {
     implementation libs.kotlin
 
     // Dependency Injection
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.0.0'
     testImplementation libs.koinTest
     implementation libs.koin
     implementation libs.koinAndroidXScop
@@ -73,7 +71,7 @@ dependencies {
 
     implementation libs.koin
     implementation libs.koinJava
-    implementation libs.firebaseCore
+
 
 
     //add test

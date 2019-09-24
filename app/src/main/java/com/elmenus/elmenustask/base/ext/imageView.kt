@@ -3,6 +3,7 @@ package com.elmenus.elmenustask.base.ext
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.elmenus.elmenustask.R
 
 /**
  * Created by Hossam Elsawy on 7/21/2019.
@@ -11,7 +12,7 @@ import com.bumptech.glide.request.RequestOptions
 
 fun ImageView.loadImage(
     url: String?,
-    placeHolderResource: Int = -1,
+    placeHolderResource: Int = R.color.image_loading_placeholder,
     roundImageView: Boolean = false, maxSize: Boolean = false
 ) {
     if (roundImageView) {
@@ -40,7 +41,7 @@ fun ImageView.loadImage(
 
 fun ImageView.loadImageWithCaredEdgeFormResources(
     path: String?,
-    placeHolderResource: Int = -1
+    placeHolderResource: Int = R.color.image_loading_placeholder
 ) {
     Glide.with(this.context)
         .load(path)

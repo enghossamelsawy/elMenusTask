@@ -96,4 +96,6 @@
     <string name="action_settings">Settings</string>
     <string name="items">Items</string>
     <string name="elmenus">ELmenus</string>
+    <string name="error">Error Fetching Data</string>
+    <string name="no_item_found">No Item Found</string>
 </resources>

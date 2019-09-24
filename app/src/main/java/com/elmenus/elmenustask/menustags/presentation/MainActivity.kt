@@ -57,11 +57,21 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.tags.observe(this, Observer<PagedList<TagObject>> {
             tagsAdapter.submitList(it)
+
+            if (tagsAdapter.itemCount == 0) {
+                groupContainer.visibility = View.GONE
+                no_item.visibility = View.VISIBLE
+            } else {
+                groupContainer.visibility = View.VISIBLE
+                no_item.visibility = View.GONE
+
+            }
+
         })
         viewModel.networkErrors.observe(this, Observer {
-            it?.let {
-                rootView.showSnakeBar(it)
-            }
+
+            rootView.showSnakeBar(getString(R.string.error))
+
 
         })
     }
